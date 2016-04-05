@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:weightSum="1"
+    >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="47dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="St.James Campus"
+                android:gravity="center"
+                android:id="@+id/textView"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/stjames"
+                android:id="@+id/casalomaImage"
+                android:layout_gravity="center_horizontal" />
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="St. James campus consists of five buildings. The first is a large brick building at 200 King St. E. The second and third are located at 290 and 300 Adelaide St. East and are connected. They are home to Financial Services, Creative Arts, Business Administration and the faculty of Centre for Hospitality and Culinary Arts. This campus is where the chef school is located."
+                android:gravity="center"
+                android:id="@+id/casalomatext"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:layout_marginBottom="20dp"/>
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/listView"
+                android:name="com.google.android.gms.maps.MapFragment"
+                android:layout_weight="0.50" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Direction"
+                android:id="@+id/direction"
+                android:layout_gravity="center_horizontal" />
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:id="@+id/back"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
